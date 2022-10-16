@@ -29,6 +29,17 @@
             "preLaunchTask": "dev"
         },
         {
+            "name": "Launch Extension [Exclusively]",
+            "type": "extensionHost",
+            "request": "launch",
+            "args": [
+                "--disable-extensions",
+                "--extensionDevelopmentPath=${workspaceRoot}"
+            ],
+            // "outFiles": ["${workspaceRoot}/out/**/*.js"],
+            "preLaunchTask": "dev"
+        },
+        {
             "name": "Test Extension",
             "type": "extensionHost",
             "request": "launch",
