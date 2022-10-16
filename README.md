@@ -30,6 +30,7 @@ AHK++ is a fork of [AutoHotkey Plus by cweijan](https://github.com/AutoHotkey-Pl
     -   [Folding](#folding)
     -   [Code Format](#code-format)
         -   [Formatter Directives](#formatter-directives)
+        -   [Align Selected Assignments](#align-selected-assignments)
 -   [Credits](#credits)
 
 ## Why AutoHotkey Plus Plus?
@@ -54,6 +55,7 @@ With AHK++, you can compile, debug, and run your scripts with keyboard shortcuts
 -   Open Help: `Ctrl + F1`
 -   Run: `Ctrl + F9`
 -   Run Selection: `Ctrl + F8`
+-   Align Selected Assignments: `Shift + Win + F`
 
 ## Debug
 
@@ -137,15 +139,40 @@ Supports standard VS Code formatting with a few options.
 
 Formatter directives instruct the formatter to behave a certain way on sections of code.
 
-The only directive currently supported is `FormatBlockComment` and it's used as below:
+1. `FormatBlockComment`:
 
-```autohotkey
-;@AHK++FormatBlockCommentOn
-/*
-;All text inside block comment will be formatted like regular code.
-*/
-;@AHK++FormatBlockCommentOff
-```
+    ```autohotkey
+    ;@AHK++FormatBlockCommentOn
+    /*
+    ;All text inside block comment will be formatted like regular code.
+    */
+    ;@AHK++FormatBlockCommentOff
+    ```
+
+2. `AlignAssignment`:
+
+    ```autohotkey
+    ;@AHK++AlignAssignmentOn
+    a          = 5 ; number five
+    str        = legacy text = with equal symbol
+    inputFile := "movie.mkv"
+    abc       := "abc" ; string
+    abc       := a + b
+    ;@AHK++AlignAssignmentOff
+    ```
+
+#### Align Selected Assignments
+
+Select assignments:
+
+-   Right-click and select `Align Selected Assignments` from the context menu.
+-   Or press `Shift + Win + F`.
+
+![](image/align.gif)
+
+Comments' indentations are preserved during alignment. You can add new variable assignment and re-align all assignments. Your manually aligned comments will stay in their original place.
+
+![](image/alignAddVar.gif)
 
 ## Credits
 

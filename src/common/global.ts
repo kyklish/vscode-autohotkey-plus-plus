@@ -29,6 +29,7 @@ export class Global {
 export enum ConfigKey {
     allowedNumberOfEmptyLines = 'formatter.allowedNumberOfEmptyLines',
     compilePath = 'file.compilePath',
+    dropSelectionAndMoveCursor = 'alignAssignment.dropSelectionAndMoveCursor',
     enableIntellisense = 'language.enableIntellisense',
     executePath = 'file.executePath',
     helpPath = 'file.helpPath',
