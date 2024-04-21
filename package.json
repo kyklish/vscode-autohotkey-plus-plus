@@ -480,7 +480,9 @@
         ]
     },
     "activationEvents": [
-        "onDebug"
+        "onDebug",
+        "onLanguage:ahk",
+        "onLanguage:ahk2"
     ],
     "lint-staged": {
         "*": "prettier --check",
