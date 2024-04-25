@@ -1,5 +1,11 @@
 # Changelog
 
+## Kyklish Fixes
+
+-   After installation disable extension's synchronization in `VSCode Extensions (Ctrl+Shift+X)` tab (new version will be prompted)
+-   `kyklish-version/extension-activation-win7` add activation event `onLanguage:ahk` to fix automatic activation of the extension in Windows 7
+-   `kyklish-version/continuation-section-hotfix` fix continuation section formatting, when user write un-balanced number of open/close curly braces: if less closed braces - code must be indented, if more closed braces - code must be un-indented
+
 ## 5.0.3 - 2023-08-21 🏄
 
 -   Fix extension crash when switching to a nullish editor ([Issue #398](https://github.com/mark-wiemer-org/ahkpp/issues/398))
