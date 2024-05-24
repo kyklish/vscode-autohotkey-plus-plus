@@ -28,7 +28,7 @@ export class SymbolProvider implements vscode.DocumentSymbolProvider {
             result.push(
                 new vscode.SymbolInformation(
                     label.name,
-                    vscode.SymbolKind.Field,
+                    vscode.SymbolKind.Interface,
                     null,
                     new vscode.Location(
                         label.document.uri,
