@@ -195,6 +195,7 @@ export class Parser {
                 return hotkey;
             }
         }
+        return undefined;
     }
 
     public static async getLabelByName(
@@ -264,6 +265,7 @@ export class Parser {
                 text.indexOf(hotkeyName),
             );
         }
+        return undefined;
     }
 
     private static getLabelByLine(document: vscode.TextDocument, line: number) {
